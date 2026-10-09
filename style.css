@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 40px 20px;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+/* Theme Button */
+
+#themeButton {
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Login */
+
+.auth-section {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#loginButton,
+#logoutButton {
+    background: #14b8a6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#userInfo {
+    color: #94a3b8;
+}
+
+/* Total Card */
+
+.total-card {
+    background: linear-gradient(135deg, #134e4a, #0f766e);
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.total-label {
+    color: #ccfbf1;
+    font-size: 15px;
+}
+
+#total {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Form Card */
+
+.expense-form {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 150px 160px auto;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+input,
+select {
+    background: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    padding: 13px;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #14b8a6;
+}
+
+.expense-form button {
+    background: #14b8a6;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.expense-form button:hover,
+#loginButton:hover,
+#logoutButton:hover {
+    opacity: 0.85;
+}
+
+/* Expense Section */
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#expenseList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.expense-item {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 17px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.expense-category {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.expense-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2dd4bf;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .expense-form {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-item {
+        gap: 15px;
+    }
+}S
+
+body.light-mode {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-mode .subtitle {
+    color: #64748b;
+}
+
+body.light-mode #themeButton {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+body.light-mode .expense-form,
+body.light-mode .expense-item {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+body.light-mode input,
+body.light-mode select {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+body.light-mode .expense-category {
+    color: #64748b;
+}

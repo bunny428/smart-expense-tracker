@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div>
+                <h1>💰 Smart Expense Tracker</h1>
+                <div class="subtitle">
+                    Manage your expenses simply and securely
+                </div>
+            </div>
+
+            <button id="themeButton" onclick="toggleTheme()">
+                ☀️
+            </button>
+
+        </div>
+
+
+        <!-- Login Section -->
+        <div class="auth-section">
+
+            <button id="loginButton">
+                Login
+            </button>
+
+            <div id="userInfo" style="display: none;">
+                Logged in as:
+                <span id="userEmail"></span>
+
+                <button id="logoutButton">
+                    Logout
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Total Expense -->
+        <div class="total-card">
+
+            <div class="total-label">
+                TOTAL EXPENSES
+            </div>
+
+            ₹<span id="total">0</span>
+
+        </div>
+
+
+        <!-- Add Expense -->
+        <div class="expense-form">
+
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense name"
+            >
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Amount"
+            >
+
+            <select id="expenseCategory">
+
+                <option value="Food">🍔 Food</option>
+
+                <option value="Travel">🚌 Travel</option>
+
+                <option value="Shopping">🛍️ Shopping</option>
+
+                <option value="Bills">📄 Bills</option>
+
+                <option value="Other">📦 Other</option>
+
+            </select>
+
+            <button onclick="addExpense()">
+                + Add Expense
+            </button>
+
+        </div>
+
+
+        <!-- Expense List -->
+
+        <div class="section-title">
+            Recent Expenses
+        </div>
+
+        <div id="expenseList"></div>
+
+    </div>
+
+
+    <!-- Cognito Authentication -->
+    <script type="module" src="auth.js"></script>
+
+    <!-- Expense Logic -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
